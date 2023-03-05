@@ -1,5 +1,7 @@
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 export default function App() {
+  function goalsInputHandler() {}
+  function addGoalsHandler() {}
   return (
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
@@ -9,7 +11,7 @@ export default function App() {
         ></TextInput>
         <Button title="add Goal!"></Button>
       </View>
-      <View>
+      <View style={styles.goalsContainer}>
         <Text>list of Goals</Text>
       </View>
     </View>
@@ -18,19 +20,27 @@ export default function App() {
 
 const styles = StyleSheet.create({
   appContainer: {
-    padding: 50,
+    flex: 1,
+    paddingTop: 50,
+    paddingHorizontal: 16,
   },
   inputContainer: {
+    flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 8,
+    alignItems: "center",
+    marginBottom: 10,
+    borderBottomWidth: 1.5,
+    borderBottomColor: "#A288A6",
   },
   inputText: {
     borderWidth: 1,
-    width: "75%",
+    borderColor: "#A288A6",
+    width: "70%",
     marginRight: 5,
-    textAlign: "center",
-    borderColor: "red",
-    
+    padding: 8,
+  },
+  goalsContainer: {
+    flex: 5,
   },
 });
